@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-slate-blue: hsl(252, 100%, 67%); /*(background)*/
+    --Light-royal-blue: hsl(241, 81%, 54%); 
+    --Violet-blue: hsla(256, 72%, 46%, 1); /*(circle)*/
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    --bodyFont: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+    background-color: var(--White);
+    font-family: var(--bodyFont);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    display: flex;
+    width: 55%;
+    background-color: var(--White);
+    border: 1px solid transparent;
+    border-radius: 30px;
+    box-shadow: 0 0 10px var(--Light-lavender);
+}
+
+.flex_left{
+    color: var(--White);
+    background-image: linear-gradient(to top, var(--Cobalt-blue), var(--Light-slate-blue));
+    border-radius: 30px;
+    text-align: center;
+    width: 50%;
+}
+
+.flex_left h3{
+    color: var(--Light-lavender);
+    margin-top: 50px;
+    
+}
+
+.flex_left p{
+    color: var(--Light-lavender);
+    width: 65%;
+    margin: 20px auto 50px;
+}
+
+.circle{
+    border: 1px solid transparent;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Light-royal-blue));
+    margin: 50px auto;
+    align-items: center;
+    
+}
+
+.circle h1{
+    font-size: 80px;
+    margin: 40px auto 0;
+}
+
+.circle p{
+    margin: 0 auto;
+}
+
+.flex_right{
+    width: 50%;
+    /* padding: 30px; */
+}
+
+.flex_right h3{
+    width: 80%;
+    margin: 50px auto 30px;
+}
+
+.content_right{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: all .3s ease-in;
+}
+
+.info_right div{
+    display: flex;
+    gap: 10px;
+}
+
+.info_right:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.reaction{
+    background-color: hsla(0, 100%, 67%, 0.100);
+    color: var(--Light-lavender);
+    font-weight: 800;
+}
+
+.memory{
+    background-color: hsla(39, 100%, 56%, 0.100);
+    color: var(--Light-lavender);
+    font-weight: 800;
+}
+
+.verbal{
+    background-color: hsla(166, 100%, 37%, 0.100);
+    color: var(--Light-lavender);
+    font-weight: 800;
+}
+
+.visual{
+    background-color: hsla(234, 85%, 45%, 0.100);
+    color: var(--Light-lavender);
+    font-weight: 800;
+}
+
+.reaction p{
+    color: var(--Light-red);
+    font-weight: 400;
+}
+
+.memory p{
+    color: var(--Orangey-yellow);
+    font-weight: 400;
+}
+
+.verbal p{
+    color: var(--Green-teal);
+    font-weight: 400;
+}
+
+.visual p{
+    color: var(--Cobalt-blue);
+    font-weight: 400;
+}
+
+.bold{
+    font-weight: 800;
+    color: var(--Dark-gray-blue);
+}
+
+.button{
+    width: 70%;
+    margin: 50px auto;
+    background-color: rgb(8, 8, 49);
+    color: var(--White);
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    transition: .3s ease-in-out;
+    letter-spacing: .08rem;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to top, var(--Violet-blue), var(--Light-royal-blue));
+    transform: scale(1.05);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:950px){
+    .container{
+        width: 99%;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .container{
+        position: relative;
+        top: 20px;
+        left: 0;
+        transform: translate(0);
+        -ms-transform: translate(0);
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .flex_left{
+        width: 100%;
+    }
+    
+    .flex_left p{
+        width: 80%;
+    }
+    
+    .circle{
+        width: 25vh;
+        height: 25vh;
+    }
+    
+    .circle h1{
+        font-size: 70px;
+        margin: 20px auto 0;
+    }
+    
+    .flex_right{
+        width: 100%;
+    }
+
+    .attribution { 
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 8.5px; 
+    }
+}
+
+@media screen and (max-width:375px) {
+    .container{
+        width: 100%;
+    }
+    
+}
